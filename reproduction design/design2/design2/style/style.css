@@ -1,0 +1,254 @@
+* {
+  border: 0px;
+  margin: 0px;
+}
+
+p {
+  color: white;
+}
+
+body {
+  background: linear-gradient(rgb(204, 204, 204), rgb(0, 0, 0) 90%);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+nav {
+  z-index: 3;
+  position: sticky;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 15vh;
+  width: 100%;
+}
+
+.cloud {
+  z-index: 3;
+  top: -285%;
+  position: absolute;
+  height: 110vh;
+  animation: 30s linear 0s infinite normal none running clouds;
+}
+
+@keyframes clouds {
+  0% {
+      left: 45%;
+  }
+
+  25% {
+      left: 40%;
+  }
+
+  50% {
+      left: 50%;
+  }
+
+  75% {
+      left: 40%;
+  }
+
+  100% {
+      left: 45%;
+  }
+}
+
+.divbtb {
+  z-index: 5;
+  /* right: 15%;
+  left: 28%; */
+margin:0 5% 0 5%;
+  justify-content: space-around;
+  width: 99vw;
+}
+
+button {
+  margin: 5% 60px 5% 40px;
+  z-index: 5;
+  width: 150px;
+  height: 70px;
+  border-radius: 50px;
+  background: rgb(224, 224, 224);
+  box-shadow: rgb(170, 170, 170) -20px 20px 60px inset, rgb(255, 255, 255) 20px -20px 60px inset;
+  transition: transform 0.3s ease 0s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+.container {
+  z-index: 4;
+  display: flex;
+  overflow: hidden;
+  height: 67vh;
+}
+
+.display1 {
+  position: relative;
+  min-height: 60vh;
+  width: 40%;
+}
+
+.villeprimerg {
+  z-index: 2;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0) 90%);
+  position: absolute;
+  bottom: -35%;
+  left: -13px;
+  height: 136%;
+  width: 109%;
+}
+
+.titre > h1 {
+  font-family: "Playfair Display SC", serif;
+  position: sticky;
+  font-size: 4rem;
+  top: 20%;
+  left: 35%;
+  z-index: 3;
+  padding: 20px;
+  border: 2px solid whitesmoke;
+  border-radius: 30%;
+  background: rgb(0, 0, 0);
+  color: whitesmoke;
+}
+
+.dysplay2 {
+  position: relative;
+  min-height: 60vh;
+  width: 40%;
+}
+
+.primaire2 {
+  z-index: 1;
+  position: absolute;
+  bottom: -10%;
+  left: 31%;
+  height: 110%;
+  width: 70%;
+}
+
+.smallcity {
+  z-index: 0;
+  position: fixed;
+  bottom: 42%;
+  left: -3%;
+  height: 110%;
+  width: 114%;
+}
+
+.tree {
+  z-index: 2;
+  position: absolute;
+  bottom: -29%;
+  right: 63%;
+  height: 547%;
+  width: 38%;
+}
+
+.rebord {
+  position: relative;
+  height: 17vh;
+  width: 100%;
+  background: linear-gradient(black, rgb(34, 96, 134) 73%);
+}
+
+.containereau {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  height: 20vh;
+  background: linear-gradient(rgb(34, 96, 134), rgb(120, 193, 237) 90%);
+}
+
+.talug {
+  border-top-right-radius: 20px;
+  width: 35%;
+  background-color: rgb(0, 0, 0);
+  height: 20vh;
+}
+
+.bridge {
+  height: 100%;
+  position: absolute;
+  bottom: 304%;
+  left: 33%;
+  width: 112%;
+  z-index: 2;
+}
+
+.pont {
+  z-index: 5;
+  left: 32%;
+  top: -314%;
+  position: absolute;
+  height: 502%;
+  width: 36%;
+}
+
+.dancer {
+  z-index: 4;
+  left: 36%;
+  top: -151%;
+  position: absolute;
+  height: 123%;
+  width: 28%;
+}
+
+.circle {
+  z-index: 2;
+  border-radius: 50%;
+  left: 38.4%;
+  top: -194%;
+  position: absolute;
+  height: 150%;
+  width: 23%;
+  background: rgba(255, 255, 255, 0.71);
+  animation: 3s ease-in 0s infinite alternate none running lumiere;
+}
+
+@keyframes lumiere {
+  0% {
+      transform: scale(1);
+      background: linear-gradient(rgba(255, 255, 0, 0.45), white);
+  }
+
+  50% {
+      transform: scale(1.1);
+      background: linear-gradient(rgba(255, 255, 0, 0.34), white);
+  }
+
+  100% {
+      transform: scale(1);
+      background: linear-gradient(rgba(255, 255, 0, 0.537), white);
+  }
+}
+
+.lumiere {
+  z-index: 3;
+  left: 46%;
+  top: -211%;
+  position: absolute;
+  height: 171%;
+  width: 8%;
+}
+
+.talud {
+  border-top-left-radius: 20px;
+  background-color: rgb(0, 0, 0);
+  width: 35%;
+  height: 20vh;
+}
+
+.foot {
+  position: relative;
+  gap: 5px;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 19vh;
+  font-family: "Playfair Display SC", serif;
+  padding: 10px;
+}

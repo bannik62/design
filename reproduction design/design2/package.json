@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@erikwatson/snowfall": "^3.1.2",
+    "g": "^2.0.1",
+    "jquery": "^3.7.1",
+    "jquery-snowfall": "^1.7.4"
+  }
+}

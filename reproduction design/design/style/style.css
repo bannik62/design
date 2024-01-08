@@ -1,0 +1,315 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+body {
+  background: linear-gradient(to bottom,black 20%, rgb(10, 162, 33) 78%, #175e51 77%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: auto;
+  height: 100%;
+  overflow-x: hidden; /* Empêche le défilement horizontal */
+}
+.titreCenter {
+  z-index: 1;
+  position: static;
+  font-size: 8rem !important;
+  letter-spacing: 15px;
+  font-family: "Playfair Display SC", bold;
+  background-image: linear-gradient(to top, white 10%, black 114%);
+  -webkit-background-clip: text; /* Safari/Chrome */
+  background-clip: text; /* Standard syntax */
+  color: transparent; /* Rend le texte transparent pour afficher le dégradé */
+}
+p {
+  font-family: "Playfair Display SC", bold;
+  font-size: 1.5rem !important;
+}
+
+#etoile {
+  position: absolute;
+  top: -100px; /* Initial position off-screen */
+  right: 0;
+  animation: moveGif 1s linear(-0.4 -21.62%, 0.68 63.38%) forwards;
+  z-index: 1;
+  perspective: 800px;
+}
+.rotate {
+  transform: rotate(-10deg);
+}
+
+@keyframes moveGif {
+  to {
+    top: 0%;
+    right: 60%;
+    transform: translate(-100%, 230%);
+  }
+}
+
+.cloud {
+  z-index: 2;
+  position: absolute;
+  top: 200px;
+  width: 420px;
+  height: 180px;
+  background-image: url(/img/p.png); /* Ajoutez le chemin vers votre image */
+  background-size: cover;
+  animation: cloud 50s linear infinite alternate 2S; /* Réglez la durée et le style de l'animation selon vos besoins */
+  overflow-x: hidden; /* Empêche le défilement horizontal */
+}
+@keyframes cloud {
+  0% {
+    left: -100%; /* Position initiale à gauche */
+  }
+  100% {
+    left: 100%; /* Position finale à droite */
+  }
+}
+
+nav {
+  margin-bottom: 83px;
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 77px;
+  background: url("/img/Capture.PNG");
+  background-size: cover; /* Ajustez la taille de l'image selon vos besoins */
+}
+nav::before {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 255, 1) 50%,
+    rgba(0, 0, 255, 0) 50%
+  );
+}
+ 
+.draw-border{
+  font-size: xx-large;
+  margin-top: 60px;
+}
+.btnbvn {
+  width: 500px;
+  height: 300px;
+  padding: 15px;
+  color: whitesmoke;
+  font-size: 2.5rem;
+  z-index: 2;
+  background: #0a6ddf;
+  font-family: "Playfair Display SC", bold;
+  background-image: linear-gradient(to top, white 70%, black 92%);
+  -webkit-background-clip: text; /* Safari/Chrome */
+  background-clip: text; /* Standard syntax */
+  color: transparent; /* Rend le texte transparent pour afficher le dégradé */
+}
+
+.btnbvn:hover {
+  font-size: 3rem;
+  font-weight: 700;
+  border: 5 solid black !important;
+  color: azure;
+}
+
+.lune {
+  position: absolute;
+  perspective: 1000px; /* La valeur de perspective détermine l'intensité de la perspective */
+  top: 6%;
+  left: 4%;
+  z-index: 1;
+  width: 205px;
+  height: 170px;
+}
+
+.nava {
+  top: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+  object-fit: cover; /* Redimensionne en conservant le ratio, remplit le conteneur */
+  width: 100%;
+  height: 60px;
+}
+.espace3{
+  height: 13vh;
+  background: linear-gradient(to bottom, black 104%, #2993e9 80%);
+
+}
+.presentation {
+  /* top: 85px; */
+  position: relative;
+  height: 90vh;
+  width: auto;
+  background: linear-gradient(to bottom, black 14%, #2993e9 80%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.textPresentation {
+  font-size: 1.3rem;
+  word-spacing: -1px;
+  color: aliceblue;
+}
+.CollineDiv {
+  position: relative;
+  overflow: hidden;
+}
+.colline {
+  position: sticky;
+    top: 397px;
+    right: 215px;
+    width: 500px;
+    height: 400px;
+}
+.diapo {
+  z-index: 2;
+  top: 85%;
+  left: 15%;
+  right: 15%;
+  height: 30%;
+  position: absolute;
+  display: flex !important;
+  justify-content: space-around !important;
+  flex-direction: row !important;
+  align-items: center;
+  /* border: 4px solid black; */
+  padding: 10px;
+}
+@media screen and (max-width: 1000px) {
+  .diapo {
+    flex-direction: column !important;
+  }
+  /* Ajoutez ici d'autres styles spécifiques aux écrans plus petits */
+}
+
+
+.windows {
+  border-radius: 10px;
+  object-fit: cover; /* Redimensionne en conservant le ratio, remplit le conteneur */
+  height: 300px;
+  width: 400px;
+  margin: 15px;
+  
+}
+.windows:hover{
+height: 400px;
+  width: 500px;
+}
+@media screen and (max-width: 1000px) {
+  .windows {
+    border-radius: 10px;
+    object-fit: cover; /* Redimensionne en conservant le ratio, remplit le conteneur */
+    height: 200px;
+    width: 300px;
+    margin: 5px;
+    z-index: 3;
+  }
+  /* Ajoutez ici d'autres styles spécifiques aux écrans plus petits */
+}
+
+.montagne {
+  z-index: 1;
+  position: absolute;
+  top: 19%;
+  height: 850px;
+  width: 320px;
+  margin: 10px 0px -1px 0;
+}
+
+.arbre {
+  z-index: 2;
+  position: absolute;
+  top: 97%;
+  right: -9%;
+  height: 535px;
+  width: 414px;
+}
+
+
+.footer {
+  background: linear-gradient(to left, #175e51, rgb(104, 103, 10) 55%, #175e51);
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  z-index: 2;
+}
+
+
+.footer p, .footer li, .footer address {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+
+.espace {
+  height: 360px;
+  background: linear-gradient(to bottom, rgb(10, 162, 33) -13%, #175e51 79%);
+}
+.espace2 {
+  height: 200px;
+}
+.cheminDiv {
+  position: relative;
+  display: flex;
+  height: 160px;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+.chemin {
+  position: absolute;
+  top: 111%;
+  right: 50%;
+  left: 28%;
+  height: 634px;
+  width: 50%;
+  padding-bottom: 10px;
+  z-index: 2;
+}
+
+    @media screen and (max-width: 1000px) {
+      .chemin {
+position: absolute;
+    top: 112%;
+    right: 50%;
+    left: 28%;
+    height: 350px;
+    width: 50%;
+    padding-bottom: 10px;
+    z-index: 2;
+      }}
+      
+    .divMur{
+  position: relative;
+  border-radius: 10px;
+  width: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.mur {
+  position: absolute;
+  z-index: 2;
+  top: -130px;
+  width: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* etoile */
+.hidden {
+  display: none;
+}
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
