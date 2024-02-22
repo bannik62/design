@@ -1,10 +1,70 @@
-/* Inversion de la direction de la barre de défilement vers la droite */
+body {
+  background-color: whitesmoke;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.5s, color 0.5s; /* Transition fluide pour les changements de couleur */
+}
+#toggleDarkMode{
+  position: absolute;
+  top: 0px;
+  left: 30px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+#toggleDarkMode:hover::before {
+  content: "draggable";
+  position: absolute;
+  top: 38px; /* Ajustez cette valeur selon vos besoins */
+  left: 0;
+  width: 99%;
+  text-align: center;
+  border-bottom: 1px dashed blue; /* Couleur et style de la bordure */
+  border-left: 1px solid blue ;
+    border-right: 1px solid blue ;
+box-sizing: content-box;
+  padding-top: 5px; /* Espace entre la bordure et le texte */
+  padding-bottom: 5px;
+  font-size: 12px; /* Taille du texte */
+  color: blue; /* Couleur du texte */
+  background-color: white;
+  pointer-events: none; /* Empêche l'élément d'interférer avec les événements de la souris */
+}
+
+
+
+
+.dark-mode {
+  background-color: #333 !important; /* Couleur de fond sombre */
+  color: #fff; /* Couleur du texte blanc */
+}
+.borderLeft.relative.dark-mode{
+  border-left:  2px solid white !important;
+}
+.borderLeft.relative2.dark-mode{
+  border-left:  2px solid white !important;
+}
+.absolutexp.borderLeft.dark-mode{
+  border-left:  2px solid white !important;
+}  
+.bold.absoluteMargin.image-list.dark-mode{
+    border-left:  2px solid white !important;
+
+}
+
+
+
+button:hover {
+  background-color: #0056b3;
+}
+
 ::-webkit-scrollbar {
   width: 12px; /* Largeur de la barre de défilement */
   height: 12px; /* Hauteur de la barre de défilement */
-}
-::-webkit-scrollbar {
-  left: 0; /* Déplacer la barre de défilement vers la droite */
 }
 
 ::-webkit-scrollbar-track {
@@ -18,6 +78,7 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555; /* Couleur de la poignée de la barre de défilement au survol */
 }
+
 .borderLeft {
   border-left: 2px solid black;
 }
@@ -26,17 +87,10 @@
   list-style: none; /* Supprime les puces */
   margin-left: 10px;
 }
-.margin {
+.margin { 
   margin-left: 45px;
 }
 
-body {
-  margin: 0;
-  background-color: whitesmoke;
-}
-* {
-  box-sizing: border-box;
-}
 .blue {
   color: blue;
 }
@@ -110,13 +164,7 @@ p {
   color: white;
   /* overflow-x: scroll; */
 }
-.absoluteMargin {
-  width: 376px;
-  min-width: 300px;
-  position: absolute;
-  left: 228px;
-  bottom: -100px;
-}
+
 .flotteur {
   position: relative;
   width: 600px;
@@ -135,17 +183,18 @@ p {
     flex-direction: column;
     left: 155px;
   }
-  .absoluteMargin {
-    width: 330px;
-    min-width: 300px;
-    position: absolute;
-    left: 215px;
-    bottom: -325px;
-  }
+  
+   .absoluteMargin{
+    border-left: 3px solid black;
+     left: -216px;
+    width: 500px;
+   }
   .absolutexp {
     display: none;
     position: absolute;
     left: -216px;
+    width: 500px;
+    min-width: 300px;
   }
   .rond{
     margin-bottom: 15px;
@@ -163,19 +212,15 @@ p {
     flex-direction: column;
     left: 165px;
   }
-  .absoluteMargin {
-    width: 330px;
-    min-width: 300px;
-    position: absolute;
-    left: 166px;
-    bottom: -335px;
-}
-  
+
   .absolutexp {
     display: none;
     position: absolute;
     left: 13px;
-    bottom: -272px;
+    bottom: -335px;
+    width: 500px;
+    min-width: 300px;
+    /* bottom: -272px; */
   
 }
 .rond{
@@ -183,7 +228,7 @@ p {
 }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 430px) {
   .leftCo {
     height: 3000px;
     width: 80%;
@@ -204,18 +249,19 @@ p {
     display: none;
     position: absolute;
     left: 92px;
-    bottom: 205px;
+    /* bottom: 205px; */
+    color: black;
+    width: 500px;
+    min-width: 300px;
 }
 .absoluteMargin{
-  width: 308px;
+  width: 400px;
   min-width: 300px;
   position: absolute;
-  left: 282px;
+  left: 200px;
   bottom: -107px;
 }
-.rond{
-  margin-bottom: 15px;
-}
+
 }
 /* ------------------------------------------ */
 .reseaux {
@@ -247,8 +293,8 @@ p {
 .absolutexp {
   display: none;
   position: absolute;
-  left: 1px;
-  bottom: 1px;
+  left: 20px;
+  top: 150px;
 }
 
 .containerExperience {
@@ -280,4 +326,12 @@ p {
 
 .rond:hover {
   background-color: #444748; /* Changement de couleur au survol */
+}
+
+.dark-mode .blue {
+  color: #66ccff; /* Couleur bleue sombre */
+}
+
+.dark-mode .languages {
+  color: #ff4d4d; /* Couleur rouge sombre */
 }
