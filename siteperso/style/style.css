@@ -11,6 +11,7 @@
   opacity: 1;
 }
 .footer {
+  width: 100%;
   background-color: black;
   color: white;
   padding: 20px 0;
@@ -51,29 +52,26 @@
   text-decoration: underline;
 }
 
-
-#travaux{
+#travaux {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-top: 100px;
-left: 0;
-width: 99vw;
-height: 81vh;
-background: radial-gradient(circle, green, black);
-
+  top: 100px;
+  left: 0;
+  width: 99vw;
+  height: 81vh;
+  background: radial-gradient(circle, green, black);
 }
-#travaux> h1{
-position: relative;
-width:70%;
+#travaux > h1 {
+  position: relative;
+  width: 70%;
   align-items: center;
   color: var(--textDark);
   text-wrap: stable;
-
 }
-#commingSoon{
+#commingSoon {
   width: 50%;
   height: 70%;
 }
@@ -265,7 +263,6 @@ body {
   }
 
   #container {
-  
     position: absolute;
     left: 0;
     margin-top: 100px;
@@ -288,7 +285,6 @@ body {
   }
   #logo {
     width: 99vw;
-    image-rendering: optimizeQuality;
   }
 
   h2 {
@@ -321,7 +317,7 @@ body {
   .flou {
     position: relative;
     left: 0;
-    top:10px;
+    top: 10px;
     width: 99vw;
     height: 70px;
     background: rgb(0, 0, 0);
@@ -373,6 +369,10 @@ body {
     position: absolute;
     left: 500px;
     transition: left 1s ease;
+  }
+
+  #content .article:first-of-type {
+    margin: 150px 10px 20px 10px;
   }
 }
 
@@ -643,6 +643,9 @@ body {
     /* left: -500px; */
     transition: left 1s ease;
   }
+  #content .article:first-of-type {
+    margin: 150px 10px 20px 10px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 900px) {
@@ -821,7 +824,6 @@ body {
     background-color: black;
   }
 
-
   #divText {
     height: auto;
     max-width: 90%;
@@ -924,7 +926,13 @@ body {
 }
 
 @media screen and (min-width: 900px) and (max-width: 1600px) {
+  #containerNav {
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
   .navi {
+    top: 0;
     left: 0;
     z-index: 2;
     position: fixed;
@@ -1079,7 +1087,7 @@ body {
     z-index: 2;
     letter-spacing: 5px;
     position: fixed;
-    left: 15px;
+    left: 34px;
     top: 75px;
     font-family: var(--alluroFont);
     font-size: 1.5rem;
@@ -1094,10 +1102,14 @@ body {
   }
 
   #container {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
     position: absolute;
     left: 0;
     padding-top: 85px;
-    height:auto;
+    height: auto;
     width: 99vw;
   }
 
@@ -1110,8 +1122,8 @@ body {
   #divLogo {
     width: 99vw;
     position: relative;
-    left: 2px;
-    top: 0;
+    left: 0px;
+    top: 3px;
     /* z-index: 2; */
     background-color: white;
     /* margin: -2px; */
@@ -1120,7 +1132,8 @@ body {
     left: 0px;
     top: 0;
     position: relative;
-    image-rendering: optimizeQuality;
+    filter: invert(100%); /* Inverse toutes les couleurs */
+    filter: blur(1);
   }
 
   h2 {
@@ -1163,8 +1176,8 @@ body {
   }
 
   .flouDeux {
-    left: 0px;
-    bottom: 60px;
+    left: 2px;
+    bottom: 39px;
     z-index: 0;
     position: relative;
     width: 99vw;
@@ -1179,13 +1192,13 @@ body {
 
   #divImgDeco {
     /* bottom: 26px; */
-    top: -71px;
+    top: 2px;
     position: relative;
-    bottom:20px;
+    bottom: 20px;
     width: 99vw;
-    height: 100vh;
+    height: 99vh;
   }
-  .deco{
+  .deco {
     height: 100%;
     width: 100%;
   }
@@ -1205,8 +1218,140 @@ body {
     height: 100px;
     background-color: #bebfbf;
     position: absolute;
-    top: 15px;
+    top: 2050px;
     left: -500px;
     transition: left 1.5s ease;
   }
 }
+
+.article {
+  margin: 30px 10px 20px 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 13px;
+  height: auto;
+  border: 2px solid rgb(26, 169, 88);
+  color: greenyellow;
+  background: linear-gradient(145deg, #5a5656, #0d150d);
+  border-radius: 2%;
+  box-shadow: inset 2.91px 2.91px 15px green, inset -9.91px -9.91px 4px #6e6e6e;
+}
+.article h1 {
+  font-family: var(--juliusFont);
+  font-size: 3rem;
+  margin: 20px 0 40px 0;
+}
+.article h2 {
+  .article
+  p {
+    margin: 5px 0 10px 0;
+  /* color: rgb(26, 169, 88) !important; */
+};
+  color: #3ccc3c;
+  margin: 20px 0 10px 0;
+}
+
+.article h3 {
+  text-decoration: underline;
+}
+.article ul {
+  margin-bottom: 20px 0 20px 0;
+  list-style: none;
+
+}
+.article li {
+  line-height: 1.6;
+  letter-spacing: 2px;
+  padding: 5px;
+  font-size: larger;
+}
+
+.article p:first-of-type {
+  color: lightgreen !important;
+  font-size: 1.2rem;
+}
+.article p {
+  margin: 5px 0 10px 0;
+  /* color: rgb(26, 169, 88) !important ; */
+}
+
+.tuto {
+  margin: 20px 10px 10px 10px;
+  padding: 10px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 13px;
+  height: auto;
+  border: 2px solid rgb(169, 152, 26);
+}
+
+.tuto h1 {
+  font-family: var(--juliusFont);
+  font-size: 2.6rem;
+  margin: 20px 0 40px 0;
+  color: rgb(175, 47, 255);
+}
+.tuto h2 {color:rgb(77, 236, 45)
+}
+
+
+.tuto h3 {
+  font-size: 2.4rem;
+  color: rgb(175, 47, 255);
+  margin: 0 0 40px 0;
+}
+
+.tuto p {
+  margin: 5px 0 10px 0;
+  color: rgb(26, 169, 88) !important ;
+}
+
+.comparaison {
+  margin: 20px 10px 10px 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 13px;
+  height: auto;
+  border: 2px solid rgb(26, 100, 169);
+  color: rgb(47, 120, 255);
+}
+
+
+/* Style pour la fenêtre modale */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+  z-index: 9999; /* Z-index élevé pour s'assurer qu'il est au-dessus de tout le reste */
+}
+
+/* Style pour le contenu de la fenêtre modale */
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Style pour le bouton de fermeture */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+*{/* outline: 2px solid red; */}

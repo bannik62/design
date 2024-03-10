@@ -1,0 +1,342 @@
+body {
+  background-color: whitesmoke;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.5s, color 0.5s; /* Transition fluide pour les changements de couleur */
+}
+#toggleDarkMode{
+  position: absolute;
+  top: 0px;
+  left: 30px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+#toggleDarkMode:hover::before {
+  content: "draggable";
+  position: absolute;
+  top: 38px; /* Ajustez cette valeur selon vos besoins */
+  left: 0;
+  width: 99%;
+  text-align: center;
+  border-bottom: 1px dashed blue; /* Couleur et style de la bordure */
+  border-left: 1px solid blue ;
+    border-right: 1px solid blue ;
+box-sizing: content-box;
+  padding-top: 5px; /* Espace entre la bordure et le texte */
+  padding-bottom: 5px;
+  font-size: 12px; /* Taille du texte */
+  color: blue; /* Couleur du texte */
+  background-color: white;
+  pointer-events: none; /* Empêche l'élément d'interférer avec les événements de la souris */
+}
+
+
+
+
+.dark-mode {
+  background-color: #333 !important; /* Couleur de fond sombre */
+  color: #fff; /* Couleur du texte blanc */
+}
+.borderLeft.relative.dark-mode{
+  border-left:  2px solid white !important;
+}
+.borderLeft.relative2.dark-mode{
+  border-left:  2px solid white !important;
+}
+.absolutexp.borderLeft.dark-mode{
+  border-left:  2px solid white !important;
+}  
+.bold.absoluteMargin.image-list.dark-mode{
+    border-left:  2px solid white !important;
+
+}
+
+
+
+button:hover {
+  background-color: #0056b3;
+}
+
+::-webkit-scrollbar {
+  width: 12px; /* Largeur de la barre de défilement */
+  height: 12px; /* Hauteur de la barre de défilement */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Couleur de l'arrière-plan de la barre de défilement */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Couleur de la poignée de la barre de défilement */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Couleur de la poignée de la barre de défilement au survol */
+}
+
+.borderLeft {
+  border-left: 2px solid black;
+}
+
+.image-list {
+  list-style: none; /* Supprime les puces */
+  margin-left: 10px;
+}
+.margin { 
+  margin-left: 45px;
+}
+
+.blue {
+  color: blue;
+}
+.languages {
+  color: orangered;
+}
+h1 {
+  font-size: 4rem;
+  letter-spacing: 10px;
+  font-family: "Kanit", sans-serif; /* Utilisation de la police Kanit pour le corps du texte */
+  text-wrap: wrap;
+}
+h2 {
+  font-size: 2rem;
+  letter-spacing: 3px;
+  font-family: "Kanit", sans-serif; /* Utilisation de la police Kanit pour le corps du texte */
+  text-wrap: wrap;
+}
+ul {
+  font-weight: bold;
+}
+
+li {
+  margin: 15px 0 15px 0;
+  font-size: 1.4rem;
+}
+
+li.li {
+  transition: transform 0.6s ease, background-color 0.8s ease; 
+
+}
+
+li.li:hover {
+       position: relative;
+    left: -250px; 
+    transition: transform 0.5s, left 0.5s; 
+
+  background-color: #606263;
+  color: white;
+  transform: scale(1.1); /* Augmente la taille de l'élément */
+  padding: 25px;
+  border-radius: 10px;
+  letter-spacing: 2px;
+  width: 850px; /* Modifie la largeur de l'élément */
+  min-height: 100px; /* Modifie la hauteur minimale de l'élément */
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform-origin: bottom;
+  text-wrap: wrap;
+}
+
+.li div:hover {
+  color: orange;
+}
+
+p {
+  font-size: 2rem;
+}
+.container {
+  display: flex;
+  /* height: 99vh; */
+}
+
+.leftCo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: auto;
+  height: 2650px;
+  padding: 2%;
+  margin: 0;
+  background-color: gray;
+  color: white;
+  /* overflow-x: scroll; */
+}
+
+.flotteur {
+  position: relative;
+  width: 600px;
+  display: flex;
+  justify-content: space-around;
+  left: 100px;
+}
+@media screen and (max-width: 1000px) {
+  .leftCo {
+    height: 2850px;
+  }
+  .flotteur {
+    position: relative;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    left: 155px;
+  }
+  
+   .absoluteMargin{
+    border-left: 3px solid black;
+     left: -216px;
+    width: 500px;
+   }
+  .absolutexp {
+    display: none;
+    position: absolute;
+    left: -216px;
+    width: 500px;
+    min-width: 300px;
+  }
+  .rond{
+    margin-bottom: 15px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .leftCo {
+    height: 2860px;
+    width: 60%;
+  }
+  .flotteur {
+    position: relative;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    left: 165px;
+  }
+
+  .absolutexp {
+    display: none;
+    position: absolute;
+    left: 13px;
+    bottom: -335px;
+    width: 500px;
+    min-width: 300px;
+    /* bottom: -272px; */
+  
+}
+.rond{
+  margin-bottom: 15px;
+}
+}
+
+@media screen and (max-width: 430px) {
+  .leftCo {
+    height: 3000px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+  }
+  .flotteur {
+    margin: 15px;
+    position: relative;
+    width: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    left: 30px;
+  }
+  .absolutexp {
+    display: none;
+    position: absolute;
+    left: 92px;
+    /* bottom: 205px; */
+    color: black;
+    width: 500px;
+    min-width: 300px;
+}
+.absoluteMargin{
+  width: 400px;
+  min-width: 300px;
+  position: absolute;
+  left: 200px;
+  bottom: -107px;
+}
+
+}
+/* ------------------------------------------ */
+.reseaux {
+  list-style: none;
+}
+.rightCo {
+  background-color: whitesmoke;
+  width: 70%;
+  margin-left: 1%;
+}
+
+.formationComplement {
+  display: flex;
+}
+.relative {
+  position: relative;
+  width: 100%;
+  height: 150px;
+}
+.relative2 {
+  position: relative;
+  width: 100%;
+  height: 1300px;
+}
+.absolute {
+  position: absolute;
+  left: -26px;
+}
+.absolutexp {
+  display: none;
+  position: absolute;
+  left: 20px;
+  top: 150px;
+}
+
+.containerExperience {
+  width: 100%;
+  height: 230px;
+  /* border: 3px solid black; */
+  position: relative;
+  padding: 10px;
+}
+/* .flotteur {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  left: 10%;
+} */
+
+.rond {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 50px; /* Utilisation d'un grand rayon pour obtenir une forme de pilule */
+  background-color: #6062636c; /* Couleur de fond du bouton */
+  color: #fff; /* Couleur du texte */
+  text-align: center; /* Centrer le texte à l'intérieur du bouton */
+  text-decoration: none; /* Supprimer la décoration du texte par défaut */
+  cursor: pointer; /* Afficher un curseur pointer au survol */
+  transition: background-color 0.8s ease; /* Transition fluide pour le changement de couleur au survol */
+}
+
+.rond:hover {
+  background-color: #444748; /* Changement de couleur au survol */
+}
+
+.dark-mode .blue {
+  color: #66ccff; /* Couleur bleue sombre */
+}
+
+.dark-mode .languages {
+  color: #ff4d4d; /* Couleur rouge sombre */
+}

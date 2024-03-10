@@ -1,0 +1,41 @@
+h1{
+	text-align:center-left;
+	color:white;
+	font-size:75px;
+	margin-top:0;
+	background-color:purple;
+
+	
+}
+p{
+    font-family: Verdana;
+	font-size: 25px
+	
+}
+
+i{ 
+    font-size: 20px;
+	color: black ;
+	
+
+}
+table{ color:blue ;
+}
+
+h6{ color: red ;
+    font-size : 20px ;
+
+}
+
+h2{ color: black ;
+   font-size: 20px ;
+}
+h3{ color: red ;
+    font-size:20px;
+}
+
+table{  
+        width: 400px;
+        background-color: purple;
+        border: solid 4px black
+		

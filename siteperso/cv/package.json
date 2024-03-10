@@ -1,0 +1,17 @@
+{
+  "name": "cvfolio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^2.6.14"
+  },
+  "dependencies": {
+    "rollup": "^2.56.3"
+  }
+}

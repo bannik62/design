@@ -25,9 +25,6 @@ const extensionPage = `
   </section>
 </div>
 
-<div class="flou">
-
-</div>
 
 <div id="divLogo">
   <img
@@ -39,9 +36,9 @@ const extensionPage = `
   />
 </div>
 
-<div class="flouDeux"> 
+
  <div id="download" class="download"></div>  
-</div>
+
 
 
 <div id="divImgDeco">
