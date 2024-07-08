@@ -1,7 +1,7 @@
 import bcrypt from 'bcrypt';
 
 const saltRounds = 10; // Nombre de rounds de salage pour bcrypt
-const password = 'bad';
+const password = '';
 
 bcrypt.hash(password , saltRounds, (err, hash) => {
   if (err) {
